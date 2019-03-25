@@ -19,7 +19,7 @@
                   </div>
                   <div class="mu-top-phone">
                     <i class="fa fa-phone"></i>
-                    <span>(568) 986 652</span>
+                    <span>(+254) 986 652</span>
                   </div>
                 </div>
               </div>
@@ -32,6 +32,38 @@
                       <li><a href="#"><span class="fa fa-google-plus"></span></a></li>
                       <li><a href="#"><span class="fa fa-linkedin"></span></a></li>
                       <li><a href="#"><span class="fa fa-youtube"></span></a></li>
+                          <!-- Right Side Of Navbar -->
+                   
+                        <!-- Authentication Links -->
+                        @guest
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('login') }}"><span class="fa fa-user"></span>{{ __('Login') }}</a>
+                            </li>
+                            @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}"><span class="fa fa-sign-in"></span>{{ __('Register') }}</a>
+                                </li>
+                            @endif
+                        @else
+                            <li class="nav-item dropdown">
+                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                    {{ Auth::user()->name }} <span class="caret"></span>
+                                </a>
+
+                                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+                                    <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                        @csrf
+                                    </form>
+                                </div>
+                            </li>
+                        @endguest
+                    
                     </ul>
                   </nav>
                 </div>
@@ -57,7 +89,7 @@
           </button>
           <!-- LOGO -->              
           <!-- TEXT BASED LOGO -->
-          <a class="navbar-brand" href="index.html"><i class="fa fa-university"></i><span>Varsity</span></a>
+          <a class="navbar-brand" href="index.html"><i class="fa fa-university"></i><span>University</span></a>
           <!-- IMG BASED LOGO  -->
           <!-- <a class="navbar-brand" href="index.html"><img src="assets/img/logo.png" alt="logo"></a> -->
         </div>
@@ -66,15 +98,9 @@
             <li class="active"><a href="../">Home</a></li>            
             <li><a href="{{route('courses')}}">Course</a></li>                          
             <li><a href="gallery.html">Gallery</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <span class="fa fa-angle-down"></span></a>
-              <ul class="dropdown-menu" role="menu">
-                <li><a href="blog-archive.html">Blog Archive</a></li>                
-                <li><a href="blog-single.html">Blog Single</a></li>                
-              </ul>
-            </li>            
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="404.html">404 Page</a></li>               
+                <li><a href="{{route('blog')}}">Blog</a></li>                      
+            <li><a href="{{route('contact')}}">Contact</a></li>
+            <li><a href="404.html">Shop</a></li>               
             <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
           </ul>                     
         </div><!--/.nav-collapse -->        
