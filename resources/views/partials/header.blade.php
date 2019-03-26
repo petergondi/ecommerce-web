@@ -41,7 +41,7 @@
                             </li>
                             @if (Route::has('register'))
                                 <li class="nav-item">
-                                    <a class="nav-link" href="{{ route('register') }}"><span class="fa fa-sign-in"></span>{{ __('Register') }}</a>
+                                    <a class="nav-link" href="{{ route('register') }}"><span class="fa fa-sign-in"></span>{{ __('Sign Up') }}</a>
                                 </li>
                             @endif
                         @else
@@ -97,10 +97,10 @@
           <ul id="top-menu" class="nav navbar-nav navbar-right main-nav">
             <li class="active"><a href="../">Home</a></li>            
             <li><a href="{{route('courses')}}">Course</a></li>                          
-            <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="{{route('blog')}}">Blog</a></li>                      
+            <li><a href="gallery.html">About</a></li>
+            <li><a href="{{route('blog')}}">Blog</a></li>                      
             <li><a href="{{route('contact')}}">Contact</a></li>
-            <li><a href="404.html">Shop</a></li>               
+            <li><a href="404.html"><span class="fa fa-shopping-bag"></span>Shop</a></li>               
             <li><a href="#" id="mu-search-icon"><i class="fa fa-search"></i></a></li>
           </ul>                     
         </div><!--/.nav-collapse -->        

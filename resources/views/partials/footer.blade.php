@@ -44,10 +44,10 @@
               <div class="mu-footer-widget">
                 <h4>Contact</h4>
                 <address>
-                  <p>P.O. Box 320, Ross, California 9495, USA</p>
-                  <p>Phone: (415) 453-1568 </p>
-                  <p>Website: www.markups.io</p>
-                  <p>Email: info@markups.io</p>
+                  <p>P.O. Box 320, Ross, Nairobi 9495, Kenya</p>
+                  <p>Phone: (+254) 453-1568 </p>
+                  <p>Website: www.movetech.com</p>
+                  <p>Email: info@movetech.com</p>
                 </address>
               </div>
             </div>
@@ -60,7 +60,7 @@
     <div class="mu-footer-bottom">
       <div class="container">
         <div class="mu-footer-bottom-area">
-          <p>&copy; All Right Reserved. Designed by <a href="http://www.markups.io/" rel="nofollow">MarkUps.io</a></p>
+          <p>&copy; All Right Reserved. Designed by Movetech Solutions</a></p>
         </div>
       </div>
     </div>
